@@ -15,11 +15,6 @@ namespace QRCodeGen
             this.cboECCLevel.SelectedIndex = 0;
         }
 
-        private void btnGenerate_Click(object sender, EventArgs e)
-        {
-            this.PreviewCode();
-        }
-
         private void btnSave_Click(object sender, EventArgs e)
         {
             this.saveFileDialog1.Filter = "Bitmap Image|*.bmp|PNG Image|*.png|SVG Imagee|*.svg";
@@ -209,6 +204,8 @@ namespace QRCodeGen
                         "Error Loading Icon",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+
+                this.PreviewCode();
             }
 
         }
@@ -217,6 +214,12 @@ namespace QRCodeGen
         {
             this.picIcon.Image = null;
             this.iconImage = null;
+            this.PreviewCode();
+        }
+
+        private void numericUpDownIconSize_ValueChanged(object sender, EventArgs e)
+        {
+            this.PreviewCode();
         }
     }
 }

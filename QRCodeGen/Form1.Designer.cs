@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             label1 = new Label();
             txtURL = new TextBox();
             label2 = new Label();
             btnUploadIcon = new Button();
             picQRCode = new PictureBox();
             btnSave = new Button();
-            btnGenerate = new Button();
             saveFileDialog1 = new SaveFileDialog();
             label3 = new Label();
             cboECCLevel = new ComboBox();
@@ -96,23 +96,13 @@
             // 
             // btnSave
             // 
-            btnSave.Location = new Point(4, 128);
+            btnSave.Location = new Point(5, 105);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(75, 23);
             btnSave.TabIndex = 6;
             btnSave.Text = "Save";
             btnSave.UseVisualStyleBackColor = true;
             btnSave.Click += btnSave_Click;
-            // 
-            // btnGenerate
-            // 
-            btnGenerate.Location = new Point(4, 99);
-            btnGenerate.Name = "btnGenerate";
-            btnGenerate.Size = new Size(75, 23);
-            btnGenerate.TabIndex = 7;
-            btnGenerate.Text = "Generate";
-            btnGenerate.UseVisualStyleBackColor = true;
-            btnGenerate.Click += btnGenerate_Click;
             // 
             // label3
             // 
@@ -145,6 +135,7 @@
             numericUpDownIconSize.Size = new Size(120, 23);
             numericUpDownIconSize.TabIndex = 11;
             numericUpDownIconSize.Value = new decimal(new int[] { 16, 0, 0, 0 });
+            numericUpDownIconSize.ValueChanged += numericUpDownIconSize_ValueChanged;
             // 
             // picIcon
             // 
@@ -185,12 +176,12 @@
             Controls.Add(numericUpDownIconSize);
             Controls.Add(cboECCLevel);
             Controls.Add(label3);
-            Controls.Add(btnGenerate);
             Controls.Add(btnSave);
             Controls.Add(btnUploadIcon);
             Controls.Add(label2);
             Controls.Add(txtURL);
             Controls.Add(label1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
             Text = "QR Code Generator";
             ((System.ComponentModel.ISupportInitialize)picQRCode).EndInit();
@@ -209,7 +200,6 @@
         private Button btnUploadIcon;
         private PictureBox picQRCode;
         private Button btnSave;
-        private Button btnGenerate;
         private SaveFileDialog saveFileDialog1;
         private Label label3;
         private ComboBox cboECCLevel;
