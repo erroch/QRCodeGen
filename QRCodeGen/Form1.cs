@@ -172,7 +172,7 @@ namespace QRCodeGen
 
         private void btnUploadIcon_Click(object sender, EventArgs e)
         {
-            this.openFileDialog1.Filter = "Bitmap Image|*.bmp|PNG Image|*.png";
+            this.openFileDialog1.Filter = "Image Files|*.bmp;*.png|Bitmap Image|*.bmp|PNG Image|*.png";
             DialogResult result = this.openFileDialog1.ShowDialog();
 
             if (result == DialogResult.OK)
