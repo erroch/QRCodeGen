@@ -20,5 +20,6 @@ A QR code generator.
   ### Known Issues
   Considering this is maybe an hour or so's worth of work, probably many.
   Image % doesn't seem to be quite accurate, but it's close enough for my needs.
+  Image doesn't block out background when it is transparent.
   
   
